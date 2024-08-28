@@ -1,5 +1,7 @@
-const dark = {
+export const dark = {
   cores: '#0000'
 }
 
-export default dark
+export const light = {
+  cores: '#fff'
+}
