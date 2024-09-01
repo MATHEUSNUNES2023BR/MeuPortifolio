@@ -20,18 +20,18 @@ export const NavContainer = styled.nav`
     display: flex;
     width: 100%;
     height: 40vh;
-    margin: 8vw 0 0 3vw;
+    margin: 8vw 0 0 5vw;
     ul{
       display: flex;
       justify-content: space-around;
       flex-direction: column;
       list-style: none;
-    li{
-      font-size: calc(0.45vw + 1.30rem);
-      font-family: "Roboto", sans-serif;
-      color: white;
-      cursor: pointer;
-    }
+      li{
+        font-size: calc(0.45vw + 1.30rem);
+        font-family: "Roboto", sans-serif;
+        color: white;
+        cursor: pointer;
+      }
     }
   }
  

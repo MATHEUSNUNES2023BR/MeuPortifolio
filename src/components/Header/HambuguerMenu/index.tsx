@@ -1,34 +1,31 @@
-import { useState } from "react";
-import Lottie from 'react-lottie';
+import Lottie, { LottieRefCurrentProps} from 'lottie-react';
 import AnimationData from './MenuHambuguer.json';
 import { Hambuguer } from "./style";
-
+import { useRef, useState } from 'react';
 function MenuHambuguer() {
-  const [direction, setDirection] = useState(-1);
-  const [isStopped, setIsStopped] = useState(true);
+  const hamburguerRef= useRef<LottieRefCurrentProps>(null)
+  const [direction, setDirection] = useState(1);
+  const animationPlay = () => {
+    if(direction == 1){
+      hamburguerRef.current?.play()
+      hamburguerRef.current?.setDirection(1)
 
-  const defaultOptions = {
-    loop: false,
-    autoplay: false,
-    animationData: AnimationData,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
-  };
-
-  const handleClick = () => {
-    setDirection(direction === 1 ? -1 : 1);
-    setIsStopped(false);
-  };
-
+    }else{
+      hamburguerRef.current?.play()
+      hamburguerRef.current?.setDirection(-1)
+    }
+    setDirection(direction == 1 ? -1 : 1)
+  }
   return (
-    <Hambuguer onClick={handleClick} className="Hambuguer">
+    <Hambuguer className="Hambuguer">
       <Lottie
-        options={defaultOptions}
         height="100%"
         width="100%"
-        isStopped={isStopped}
-        direction={direction}
+        autoplay={false}
+        loop={false}
+        onClick={animationPlay}
+        lottieRef={hamburguerRef}
+        animationData={AnimationData}
       />
     </Hambuguer>
   );

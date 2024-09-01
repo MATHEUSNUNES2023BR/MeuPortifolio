@@ -1,34 +1,34 @@
-import { useState } from "react";
-import Lottie from 'react-lottie';
+import { useRef,useState } from "react";
+import Lottie, { LottieRefCurrentProps} from 'lottie-react';
 import AnimationData from './Switch.json';
 import { Switch } from "./style";
 
 function SwitchButton() {
-  const [direction, setDirection] = useState(-1);
-  const [isStopped, setIsStopped] = useState(true);
+  const SwitchRef= useRef<LottieRefCurrentProps>(null)
+  const [direction, setDirection] = useState(1);
 
-  const defaultOptions = {
-    loop: false,
-    autoplay: false,
-    animationData: AnimationData,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
-  };
+  const animationPlay = () => {
+    if(direction == 1){
+      SwitchRef.current?.play()
+      SwitchRef.current?.setDirection(1)
 
-  const handleClick = () => {
-    setDirection(direction === 1 ? -1 : 1);
-    setIsStopped(false);
-  };
+    }else{
+      SwitchRef.current?.play()
+      SwitchRef.current?.setDirection(-1)
+    }
+    setDirection(direction == 1 ? -1 : 1)
+  }
 
   return (
-    <Switch onClick={handleClick}>
+    <Switch>
       <Lottie
-        options={defaultOptions}
+        autoplay={false}
+        loop={false}
+        onClick={animationPlay}
+        lottieRef={SwitchRef}
+        animationData={AnimationData}
         height="100%"
         width="100%"
-        isStopped={isStopped}
-        direction={direction}
       />
     </Switch>
   );

@@ -1,5 +1,6 @@
 import MenuHambuguer from "./HambuguerMenu"
 import NavigationMenu from "./NavigationMenu"
+import Sidebar from "./Sidebar"
 import { HeaderComponent } from "./style"
 import SwitchButton from "./SwitchButton"
 
@@ -9,6 +10,7 @@ function Header () {
       <NavigationMenu />
       <MenuHambuguer />
       <SwitchButton />
+      <Sidebar />
     </HeaderComponent>
   )
 }
