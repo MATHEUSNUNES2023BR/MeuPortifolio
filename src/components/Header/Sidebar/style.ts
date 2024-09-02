@@ -9,6 +9,6 @@ export const SidebarMenu = styled.aside<Props>`
   height: 88vh;
   overflow-x: hidden;
   width: ${({ state }:Props) => (state === 'disabled' ? '0' : '220px')};
-  transition: 0.5s;
+  transition: 0.55s;
   background-image: ${({theme}) => theme.backgroudSidebar};
 `

@@ -9,8 +9,11 @@ export const NavContainer = styled.nav`
     li{
       font-size: calc(0.45vw + 1.30rem);
       font-family: "Roboto", sans-serif;
-      color: white;
       cursor: pointer;
+      a{
+        color: ${( { theme }) => theme.colorSidebar};
+        text-decoration: none;
+      }
     }
   } 
   @media (max-width: 1180px){
@@ -29,9 +32,12 @@ export const NavContainer = styled.nav`
       li{
         font-size: calc(0.45vw + 1.30rem);
         font-family: "Roboto", sans-serif;
-        color: ${({theme}) => theme.colorSidebar} ;
         font-weight: 500;
         cursor: pointer;
+        a{
+          color: ${({theme}) => theme.colorSidebar} ;
+          text-decoration: none;
+        }
       }
     }
   }

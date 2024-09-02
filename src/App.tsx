@@ -1,13 +1,13 @@
 import { Provider } from "react-redux"
 import store from "./store"
-import Home from "./pages/Home"
 import ThemeProviderComponent from "./context/ThemeContext"
+import RoutesPage from "./routes"
 
 function App() {
   return (
     <Provider store={store}>
       <ThemeProviderComponent>
-        <Home />
+        <RoutesPage />
       </ThemeProviderComponent>
     </Provider>
   )

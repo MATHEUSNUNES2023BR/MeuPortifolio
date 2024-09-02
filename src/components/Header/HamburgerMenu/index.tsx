@@ -1,24 +1,23 @@
 import Lottie, { LottieRefCurrentProps} from 'lottie-react';
 import AnimationData from './MenuHamburger.json';
 import { Hamburger } from "./style";
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { toggleHambuguer } from '../../../features/Sidebar/sliceSidebar';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../../store';
 function MenuHamburger() {
   const dispatch = useDispatch()
+  const stateHamburger = useSelector((state:RootState) => state.sliceSidebar.hamburgerState)
   const hamburguerRef= useRef<LottieRefCurrentProps>(null)
-  const [direction, setDirection] = useState(1);
-  const animationPlay = () => {
-    if(direction == 1){
-      hamburguerRef.current?.play()
-      hamburguerRef.current?.setDirection(1)
-
-    }else{
-      hamburguerRef.current?.play()
-      hamburguerRef.current?.setDirection(-1)
-    }
-    setDirection(direction == 1 ? -1 : 1)
+  if(stateHamburger == 'active'){
+    hamburguerRef.current?.play()
+    hamburguerRef.current?.setDirection(1)
   }
+  else if(stateHamburger == 'disabled'){
+    hamburguerRef.current?.play()
+    hamburguerRef.current?.setDirection(-1)
+  }
+
   return (
     <Hamburger className="Hamburger">
       <Lottie
@@ -26,10 +25,7 @@ function MenuHamburger() {
         width="100%"
         autoplay={false}
         loop={false}
-        onClick={() => ( 
-          animationPlay(),
-          dispatch(toggleHambuguer())
-        )}
+        onClick={() => dispatch(toggleHambuguer())}
         lottieRef={hamburguerRef}
         animationData={AnimationData}
       />

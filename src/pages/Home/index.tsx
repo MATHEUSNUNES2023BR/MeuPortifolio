@@ -1,6 +1,4 @@
-import Header from "../../components/Header";
-
 function Home() {
-  return <Header /> 
+  return <h1>Rota HOME</h1>
 }
 export default Home
