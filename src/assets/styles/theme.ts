@@ -7,14 +7,22 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body{
-    background-color: #191919;
+    background-color: ${({theme})=> theme.backgroundBody};
   }
 `
 
 export const dark = {
-  cores: '#0000'
+  backgroundBody: '#191919',
+  backgroundHeader: 'linear-gradient(95deg, #0037ff, #b853ff)',
+  backgroudSidebar: 'linear-gradient(95deg, #0037ff, #b853ff)',
+  colorSidebar: '#fff',
+  color: '#fff'
 }
 
 export const light = {
-  cores: '#fff'
+  backgroundBody: '#F2F2F2',
+  backgroundHeader: 'linear-gradient(95deg, #A67E6F,  #D9C2AD)',
+  backgroudSidebar: 'linear-gradient(95deg, #A67E6F, #D9C2AD)',
+  colorSidebar: '#fff',
+  color: '#71736A'
 }

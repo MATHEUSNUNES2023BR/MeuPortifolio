@@ -29,7 +29,8 @@ export const NavContainer = styled.nav`
       li{
         font-size: calc(0.45vw + 1.30rem);
         font-family: "Roboto", sans-serif;
-        color: white;
+        color: ${({theme}) => theme.colorSidebar} ;
+        font-weight: 500;
         cursor: pointer;
       }
     }

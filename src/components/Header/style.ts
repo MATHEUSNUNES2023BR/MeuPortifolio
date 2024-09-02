@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const HeaderComponent = styled.header`
   position: relative;
-  background-image: linear-gradient(95deg, #0037ff, #b853ff);
+  background-image: ${({theme})=> theme.backgroundHeader};
   width: 100vw;
   height: 10vh;
   display: flex;
