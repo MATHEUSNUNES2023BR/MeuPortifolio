@@ -1,8 +1,11 @@
 import Lottie, { LottieRefCurrentProps} from 'lottie-react';
-import AnimationData from './MenuHambuguer.json';
-import { Hambuguer } from "./style";
+import AnimationData from './MenuHamburger.json';
+import { Hamburger } from "./style";
 import { useRef, useState } from 'react';
-function MenuHambuguer() {
+import { toggleHambuguer } from '../../../features/Sidebar/sliceSidebar';
+import { useDispatch } from 'react-redux';
+function MenuHamburger() {
+  const dispatch = useDispatch()
   const hamburguerRef= useRef<LottieRefCurrentProps>(null)
   const [direction, setDirection] = useState(1);
   const animationPlay = () => {
@@ -17,18 +20,21 @@ function MenuHambuguer() {
     setDirection(direction == 1 ? -1 : 1)
   }
   return (
-    <Hambuguer className="Hambuguer">
+    <Hamburger className="Hamburger">
       <Lottie
         height="100%"
         width="100%"
         autoplay={false}
         loop={false}
-        onClick={animationPlay}
+        onClick={() => ( 
+          animationPlay(),
+          dispatch(toggleHambuguer())
+        )}
         lottieRef={hamburguerRef}
         animationData={AnimationData}
       />
-    </Hambuguer>
+    </Hamburger>
   );
 }
 
-export default MenuHambuguer;
+export default MenuHamburger;

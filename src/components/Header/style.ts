@@ -7,23 +7,24 @@ export const HeaderComponent = styled.header`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  .Hambuguer{
+  .Hamburger{
       display: none;
   }
-  .Sidebar{
-    display: none;
-  }
+
   @media (max-width: 576px){
     justify-content: space-between;
     padding: 0 20px;
     height: 12vh;
     .Sidebar{
-      display: block;
+      .Nav{
+        display: flex;
+        width: 220px;
+      }
     }
     .Nav{
       display: none;
     }
-    .Hambuguer{
+    .Hamburger{
       display: block;
     }
   }

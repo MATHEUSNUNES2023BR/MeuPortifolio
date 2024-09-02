@@ -1,4 +1,4 @@
-import MenuHambuguer from "./HambuguerMenu"
+import MenuHambuguer from "./HamburgerMenu"
 import NavigationMenu from "./NavigationMenu"
 import Sidebar from "./Sidebar"
 import { HeaderComponent } from "./style"

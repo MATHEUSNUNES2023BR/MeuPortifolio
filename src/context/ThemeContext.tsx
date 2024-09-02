@@ -9,7 +9,6 @@ interface ThemeContextProps {
 
 function ThemeProviderComponent({ children }: ThemeContextProps){
   const theme = useSelector((state:RootState)=> state.themeReducer.mode)
-  console.log(theme)
   return(
     <ThemeProvider theme={ theme == 'light' ? light : dark}>
       <GlobalStyle />
