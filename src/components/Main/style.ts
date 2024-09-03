@@ -103,6 +103,7 @@ export const ContainerInformation = styled.div`
   }
   @media (max-width: 576px){
     pre{
+      height: 23vw;
       font-size: 4.55vw;
       width: 100%;
     }
@@ -139,9 +140,10 @@ export const ContainerIcons = styled.div`
   }
 
   @media (max-width: 576px){
-    width: 75%;
+    width: 80%;
+    margin-top: 5vh;
     img{
-      width: 65%;
+      width: 72%;
       animation: rotation 6s infinite linear;
     }
   }
