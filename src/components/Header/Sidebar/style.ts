@@ -4,6 +4,7 @@ interface Props {
 }
 export const SidebarMenu = styled.aside<Props>`
   position: absolute;
+  z-index: 2;
   left: 0;
   top: 12vh;
   height: 88vh;

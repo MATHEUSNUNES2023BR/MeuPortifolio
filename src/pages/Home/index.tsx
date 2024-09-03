@@ -1,4 +1,6 @@
+import Main from "../../components/Main"
+
 function Home() {
-  return <h1>Rota HOME</h1>
+  return <Main />
 }
 export default Home
