@@ -76,7 +76,7 @@ export const BusinessCardButton = styled.button`
     right: 2vw;
   }
   @media(max-width: 576px){
-    bottom: 2vw;
+    bottom: 2vh;
     right: 2vw;
     width: 48vw;
     height: 10vw;
