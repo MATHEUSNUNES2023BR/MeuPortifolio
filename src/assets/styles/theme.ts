@@ -8,6 +8,8 @@ export const GlobalStyle = createGlobalStyle`
   }
   body{
     background-color: ${({theme})=> theme.backgroundBody};
+    overflow-x: hidden;
+
   }
 `
 
@@ -32,6 +34,6 @@ export const light = {
   textShadow: '#A67E6F',
   sidebarIconsBackground: 'linear-gradient(220deg, lightgray, white, #A67E6F)',
   photoShadow: '#6E6E6E',
-  businesCardBackground: 'linear-gradient(220deg, #D9C2AD, darkgray)',
+  businesCardBackground: 'linear-gradient(220deg, #D9C2AD, lightgray)',
 
 }

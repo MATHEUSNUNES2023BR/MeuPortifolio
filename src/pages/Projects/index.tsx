@@ -1,4 +1,6 @@
+import Project from "../../components/Project"
+
 function Projects() {
-  return <h1>Routa Projetos</h1>
+  return <Project />
 }
 export default Projects

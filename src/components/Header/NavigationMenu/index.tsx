@@ -6,7 +6,6 @@ import { useEffect, useState } from "react"
 function NavigationMenu(){
   const dispatch = useDispatch()
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  console.log(windowWidth)
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
