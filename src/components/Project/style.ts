@@ -25,12 +25,12 @@ export const Card = styled.div`
   box-shadow: 5px 0px 14px 4px #E0D5AD;
   background-color: #5B584F;
   @media (max-width: 1180px) {
-    height: 38vh;
+    height: 60vw;
     margin: 0 auto;
   }
   @media (max-width: 576px) {
     width: 90%;
-    height: 80vh;
+    height: 145vw;
     margin: 0 auto;
     border-radius: 8px;
   }
@@ -72,15 +72,65 @@ export const CardDescription = styled.p`
   }
 `
 
-export const CardButton = styled.button`
-  width: 60%;
-  height: 3.5rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  border: none;
-  background-image: linear-gradient(220deg, #F79E6B, #F7CD82);
-  color: #5B584F;
-  font-size: calc(0.6vw + 0.5rem);
-  font-weight: 600;
-  cursor: pointer;
+export const CardIcons = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1.1rem;
+  a{
+    width: 35%;
+    text-decoration: none;
+    .github, .site {
+      height: calc(1.4vw + 1rem);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      background-image: linear-gradient(30deg, #92A78C,#F7CD82);
+      img{
+        width: 25%;
+        fill: aliceblue;
+      }
+      h3{
+        font-size: 0.95vw;
+        color: #5B584F;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+        text-transform: uppercase;
+      }
+    }
+    .github{
+      img{
+        width: 22.5%;
+      }
+    }
+  }
+  @media (max-width: 1180px) {
+    a{
+      .github, .site {
+        img{
+
+        }
+        h3{
+          font-size: 1.6vw;
+        }
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    a{
+      width: 40%;
+      
+      .github, .site {
+        height: 5vh;
+        img{
+
+        }
+        h3{
+          font-size: 2.8vw;
+        }
+      }
+    }
+  }
+  
 `
