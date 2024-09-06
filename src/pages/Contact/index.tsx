@@ -1,4 +1,6 @@
+import Contato from "../../components/Contact"
+
 function Contact() {
-  return <h1>Rota Contato</h1>
+  return <Contato />
 }
 export default Contact
