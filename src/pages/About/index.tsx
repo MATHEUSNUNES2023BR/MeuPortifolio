@@ -1,4 +1,6 @@
+import Sobre from "../../components/About/index"
+
 function About() {
-  return <h1>Rota Sobre</h1>
+  return <Sobre />
 }
 export default About
