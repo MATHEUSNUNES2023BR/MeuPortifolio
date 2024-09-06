@@ -7,7 +7,7 @@ function Sobre(){
       <h2>Sobre</h2>
       <p>
         Nascido em Florianópolis, Santa Catarina, cresci em Aparecida de Goiânia, Goiás. Atualmente, tenho 24 anos e estou cursando Engenharia de Software na Estácio, além de fazer um curso de Desenvolvedor Fullstack Python pela EBAC. Sou cristão e creio no Senhor Yeshua Hamashiach, valorizo a honestidade nas relações e busco ser transparente em tudo o que faço.
-        Embora ainda esteja em processo de me tornar um desenvolvedor fullstack completo, já possuo uma base sólida em diversas tecnologias, como React, TypeScript, JavaScript, HTML, CSS, Bootstrap e SQL. Estou sempre em busca de novos desafios para expandir minhas habilidades e contribuir com soluções inovadoras no campo da tecnologia.
+        Embora ainda esteja em processo de me tornar um desenvolvedor fullstack completo, já possuo uma base sólida em diversas tecnologias, como React, TypeScript, JavaScript, Redux, HTML, CSS, Bootstrap e SQL. Estou sempre em busca de novos desafios para expandir minhas habilidades e contribuir com soluções inovadoras no campo da tecnologia.
       </p>
       <h2>Experiência Profissional</h2>
       <p>
