@@ -21,7 +21,7 @@ export const ContainerContact = styled.div`
       label{
         font-size: 1.8vw;
         width: 20%;
-        color: white;
+        color:  ${({theme})=>theme.color};
         font-family: 'Roboto', sans-serif;
       }
       input{
@@ -29,14 +29,14 @@ export const ContainerContact = styled.div`
         width: 70%;
         height: 6vh;
         border-radius: 9px;
-        border: none;
+        border: ${({theme})=>theme.borderInput};
       }
       textarea{
         width: 70%;
         height: 14vw;
         resize: none;
         border-radius: 9px;
-        border: none;
+        border: ${({theme})=>theme.borderInput};
         font-size: 1.2vw;
       }
     }
@@ -62,7 +62,6 @@ export const ContainerContact = styled.div`
         label{
           font-size: 4vw;
           width: 20%;
-          color: white;
           font-family: 'Roboto', sans-serif;
         }
         input{

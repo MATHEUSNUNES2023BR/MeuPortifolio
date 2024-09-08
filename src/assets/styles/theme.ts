@@ -23,7 +23,8 @@ export const dark = {
   sidebarIconsBackground: 'linear-gradient(220deg, lightgray, white, #1956E6)',
   photoShadow: 'black',
   businesCardBackground: 'linear-gradient(220deg, #b853ff, #1956E6)',
-  colorAbout: '#fff'
+  colorAbout: '#fff',
+  borderInput: 'none'
 }
 
 export const light = {
@@ -36,5 +37,6 @@ export const light = {
   sidebarIconsBackground: 'linear-gradient(220deg, lightgray, white, #A67E6F)',
   photoShadow: '#6E6E6E',
   businesCardBackground: 'linear-gradient(220deg, #D9C2AD, lightgray)',
-  colorAbout: '#5B584F'
+  colorAbout: '#5B584F',
+  borderInput: '1px solid #71736A'
 }
