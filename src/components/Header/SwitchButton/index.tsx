@@ -1,4 +1,4 @@
-import { useRef,useState } from "react";
+import { useEffect, useRef,useState } from "react";
 import Lottie, { LottieRefCurrentProps} from 'lottie-react';
 import AnimationData from './Switch.json';
 import { Switch } from "./style";
@@ -8,6 +8,18 @@ function SwitchButton() {
   const SwitchRef= useRef<LottieRefCurrentProps>(null)
   const [direction, setDirection] = useState(1);
   const dispatch = useDispatch()
+  useEffect(() => {
+    // Começar no final da animação (último frame)
+    const totalFrames = AnimationData.op; // Pegando o total de frames da animação
+    if(Number(sessionStorage.getItem('switchButton')) == -1){
+      SwitchRef.current?.goToAndStop(totalFrames - 1, true)
+      setDirection(-1)
+    }else{
+      SwitchRef.current?.goToAndStop(0, true)
+      setDirection(1)
+    }
+  }, []);
+  
   const animationPlay = () => {
     if(direction == 1){
       SwitchRef.current?.play()
