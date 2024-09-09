@@ -29,9 +29,17 @@ function Main(){
         clearInterval(interval);
         sessionStorage.setItem('text', 'finished')
       }
+      window.addEventListener("beforeunload", () => {
+        sessionStorage.removeItem('text');
+      });
     }, 40);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval)
+      window.removeEventListener('beforeunload', () => {
+        sessionStorage.removeItem('text');
+      });
+    };
   }, [index, textMain]);
   return(
     <MainContainer>
