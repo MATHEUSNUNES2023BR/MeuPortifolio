@@ -16,6 +16,11 @@ function Main(){
   const [index, setIndex] = useState(0);
   const textMain = 'Olá, sou Matheus Nunes de Barros,\ndesenvolvedor web\nespecializado em React e TypeScript.\nTransformo ideias em realidade digital.';
   useEffect(() => {
+    const handleBeforeUnload = () => {
+      console.log('A página está sendo recarregada ou fechada');
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
     const interval = setInterval(() => {
       if (index < textMain.length) {
         setText(e => e + textMain[index]);

@@ -21,7 +21,7 @@ export const dataProject: data[] = [
     description:'O eFood é uma plataforma inspirada no modelo de delivery, semelhante ao iFood, onde os usuários podem explorar e selecionar restaurantes e seus cardápios de forma dinâmica. Desenvolvida com React e TypeScript, utiliza Redux para gerenciamento de estado e Styled Components para garantir uma interface moderna e responsiva.',
     gitRepo: 'https://github.com/MATHEUSNUNES2023BR/efood',
     language: 'TypeScript',
-    vercelLink:'https://efood-rose.vercel.app/produtos/'
+    vercelLink:'https://efood-rose.vercel.app/'
   },
   { photoDesktop:stakeHouseDesktop,
     title: 'StakeHouse',
