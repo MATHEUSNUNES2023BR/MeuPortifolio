@@ -13,8 +13,8 @@ import { useEffect, useState } from "react"
 import BusinessCard from "./BusinessCard"
 function Main(){
   const [text, setText] = useState('');
-  const textMain = 'Olá, sou Matheus Nunes de Barros,\ndesenvolvedor web\nespecializado em React e TypeScript.\nTransformo ideias em realidade digital.';
   const [index, setIndex] = useState(0);
+  const textMain = 'Olá, sou Matheus Nunes de Barros,\ndesenvolvedor web\nespecializado em React e TypeScript.\nTransformo ideias em realidade digital.';
   useEffect(() => {
     const interval = setInterval(() => {
       if (index < textMain.length) {
@@ -22,6 +22,7 @@ function Main(){
         setIndex(i => i + 1);
       } else {
         clearInterval(interval);
+        sessionStorage.setItem('text', 'finished')
       }
     }, 40);
 
@@ -39,7 +40,16 @@ function Main(){
       </ContainerPhoto>
 
       <ContainerInformation>
-        <pre>{text}</pre>
+        {
+        sessionStorage.getItem('text') == 'finished' ?
+        <pre>Olá, sou Matheus Nunes de Barros, <br />
+        desenvolvedor web <br />
+        especializado em React e TypeScript. <br />
+        Transformo ideias em realidade digital.
+        </pre>
+        :
+        <pre>{text}</pre> 
+        }
         <ContainerIcons>
           <img src={react} alt="" />
           <img src={typescript} alt="" />
